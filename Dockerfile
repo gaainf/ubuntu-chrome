@@ -5,7 +5,7 @@ FROM selenium/node-chrome:$VERSION
 
 USER root
 
-MAINTAINER infinum "gaainf"
+MAINTAINER gaainf "infinum@mail.ru"
 ENV DEBIAN_FRONTEND noninteractive
 ENV USER root
 
