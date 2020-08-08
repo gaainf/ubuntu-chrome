@@ -11,5 +11,11 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Build Docker image
-      run: docker build . --file Dockerfile --tag gaainf/ubuntu-chrome:3.4.0-einsteinium --build-arg VERSION=3.4.0-einsteinium
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        repository: gaainf/ubuntu-chrome
+        tags: 3.4.0-einsteinium
+        build_args: VERSION=3.4.0-einsteinium
