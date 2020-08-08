@@ -1,5 +1,5 @@
 ARG VERSION=3.4.0-einsteinium
-FROM selenium/node-chrome:$VERSiON
+FROM selenium/node-chrome:$VERSION
 
 #RUN wget --no-verbose https://selenium-release.storage.googleapis.com/3.3/selenium-server-standalone-3.3.1.jar -O /opt/selenium/selenium-server-standalone.jar
 
